@@ -24,6 +24,10 @@ allprojects {
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+kotlin {
+    jvmToolchain(17)
+}
+
 android {
     compileSdkVersion 34
 
@@ -32,9 +36,7 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = '17'
-    }
+
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'

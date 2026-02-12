@@ -49,6 +49,7 @@ class _HomwPageState extends State<HomwPage> with WidgetsBindingObserver {
         .then((value) {
       if (value == AuthLocalStatus.changed) {
         showDialog(
+            // ignore: use_build_context_synchronously
             context: context,
             builder: (BuildContext context) {
               return const AlertDialog(
